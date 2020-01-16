@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.btnUser:
                 intent = new Intent(MainActivity.this, LoginUserActivity.class);
+                intent.putExtra("tipo de cuenta", "Usuario");
                 startActivity(intent);
                 finish();
                 break;
             case R.id.btnGuardia:
                 intent = new Intent(MainActivity.this, LoginGuardiaActivity.class);
+                intent.putExtra("tipo de cuenta", "Guardia");
                 startActivity(intent);
                 finish();
                 break;
